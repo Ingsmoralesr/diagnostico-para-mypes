@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ruta Digital para tu MYPE</title>
+    <meta
+      name="description"
+      content="Agente web para diagnosticar una MYPE y generar una ruta práctica de transformación digital."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="intro-band" aria-labelledby="app-title">
+        <div class="intro-copy">
+          <p class="eyebrow">Diagnóstico guiado para emprendedores</p>
+          <h1 id="app-title">Ruta Digital para tu MYPE</h1>
+          <p class="creator-line">Creado por Ing. Segundo Morales</p>
+          <p>
+            Responde bloques cortos sobre tu negocio y recibe un plan práctico
+            para vender más, ahorrar tiempo, reducir errores y tomar mejores
+            decisiones con tecnología accesible.
+          </p>
+          <div class="intro-actions">
+            <button class="primary-button" id="startButton" type="button">
+              Iniciar diagnóstico
+            </button>
+            <button class="ghost-button" id="resetButton" type="button">
+              Reiniciar
+            </button>
+          </div>
+        </div>
+        <div class="visual-panel" aria-hidden="true">
+          <img src="assets/hero.png" alt="" />
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Diagnóstico de transformación digital">
+        <aside class="progress-panel">
+          <p class="panel-label">Avance</p>
+          <ol id="progressList" class="progress-list"></ol>
+        </aside>
+
+        <section class="agent-panel">
+          <div class="agent-header">
+            <div>
+              <p class="panel-label">Agente consultor</p>
+              <h2 id="phaseTitle">Diagnóstico</h2>
+            </div>
+            <span id="savedState" class="status-pill">Listo</span>
+          </div>
+
+          <div id="conversation" class="conversation" aria-live="polite"></div>
+          <form id="questionForm" class="question-form"></form>
+          <article id="planOutput" class="plan-output" hidden></article>
+        </section>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>Ing. Segundo Morales &copy; Ruta Digital para MYPES</p>
+    </footer>
+
+    <template id="fieldTemplate">
+      <label class="field">
+        <span class="field-label"></span>
+        <span class="field-help"></span>
+      </label>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
